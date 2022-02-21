@@ -13,12 +13,9 @@ function Book(title, author, pages, readStatus) {
     this.readStatus = readStatus
 }
 
-
 function addBookToLibrary(myBook) {
     myLibrary.push(myBook)
 }
-
-
 
 submitButton.addEventListener('click', function () {
     if(title != '' && author != '' && pages != '', readStatus != '') {
@@ -37,10 +34,4 @@ submitButton.addEventListener('click', function () {
         document.querySelector('.table-data').appendChild(tr)
         console.log(book.title, book.author, book.pages, book.readStatus)
     })
-
-
-    // title = ''
-    // author = ''
-    // pages = ''
-    // readStatus = ''
 })
