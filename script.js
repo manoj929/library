@@ -21,29 +21,18 @@ function addBookToLibrary(myBook) {
 
 
 
-
 submitButton.addEventListener('click', function() {
-
     addBookToLibrary(myBook)
+    let tr = document.createElement('tr')
     if(myLibrary){
         myLibrary.forEach(book => {
             for (const key in book) {
                 console.log(book[key])
-                let tr = document.createElement('tr')
-                // tr.innerHTML = `<td>${book[key]}</td>`
-                let td = document.createElement('td')
-                td.innerHTML += `${book[key]}`
-                tr.appendChild(td)
-                document.querySelector('.table-data').appendChild(tr)
+
+                tr.innerHTML += `<td>${book[key]}</td>`
             }
+            document.querySelector('.table-data').appendChild(tr)
             console.log(book.title, book.author, book.pages, book.readStatus)
         })
     }
 })
-
-// for (const key in object) {
-//     if (Object.hasOwnProperty.call(object, key)) {
-//         const element = object[key];
-        
-//     }
-// }
