@@ -1,8 +1,4 @@
-// const title = document.querySelector('#title').value;
-// const author = document.querySelector('#author').value;
-// const pages = document.querySelector('#pages').value;
-// const readStatus = document.querySelector('#status').value;
-// const submitButton = document.querySelector('.btn-submit');
+
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
 const pages = document.querySelector('#pages');
