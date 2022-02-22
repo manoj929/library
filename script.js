@@ -47,9 +47,13 @@ submitButton.addEventListener('click', function (e) {
     addBookToLibrary();
 });
 
-// document.querySelector('.book-list').addEventListener('click', (element) => {
-//     console.log(element.target)
-//     if(element.classList.contains('delete')){
-//         element.parentElement.parentElement.remove()
-//     }
-// })
+function deleteBook(element){
+    if (element.classList.contains('delete')) {
+        element.parentElement.parentElement.remove()
+    }
+}
+
+document.querySelector('.book-list').addEventListener('click', (e) => {
+    console.log(e.target)
+    deleteBook(e.target);
+})
