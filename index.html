@@ -13,7 +13,7 @@
     <div class="container">
         <h1 class="text-center">My Book List</h1>
         <p class="text-center">This is a project for The Odin Project in which I have to make a library using Object Constructors and LocalStorage</p>
-        <form class="mt-4">
+        <form class="mt-4" id="form-book">
             <div class="row">
                 <div class="col">
                     <label for="title" class="form-label">Title</label>
@@ -30,7 +30,7 @@
                     <input type="number" class="form-control" placeholder="ex: 10" id="pages" aria-label="pages">
                 </div>
                 <div class="col">
-                    <label for="status" class="form-label">Status</label>
+                    <label for="status" class="form-label">Read</label>
                     <select id="status" class="form-select">
                         <option value="">Choose Option</option>
                         <option value="read">Read</option>
@@ -48,31 +48,14 @@
         <table class="table mt-5">
             <thead>
               <tr>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">Pages</th>
                 <th scope="col">Status</th>
               </tr>
             </thead>
-            <tbody class="table-data">
-              <tr>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>read</td>
-              </tr>
-              <tr>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>status</td>
-              </tr>
-              <tr>
-                <td>Larry the Bird</td>
-                <td>@twitter</td>
-                <td>@fat</td>
-                <td>not read</td>
-              </tr>
+            <tbody class="book-list">
+              
             </tbody>
           </table>
     </div>

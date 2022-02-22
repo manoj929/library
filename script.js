@@ -24,12 +24,15 @@ function addBookToLibrary() {
     let tr = document.createElement('tr')
 
     myLibrary.forEach((book, i) => {
-        myLibrary[i] = Book
-        for (const key in book) {
-            console.log(book[key])
-            tr.innerHTML += `<td>${book[key]}</td>`
-        }
-        document.querySelector('.table-data').appendChild(tr)
+        
+        tr.innerHTML = `
+        <td>${book.title}</td>
+        <td>${book.author}</td>
+        <td>${book.pages}</td>
+        <td>${book.readStatus}</td>
+        <td><button class="btn btn-danger btn-sm delete">delete</button></td>
+        `
+        document.querySelector('.book-list').appendChild(tr)
         // console.log(book.title, book.author, book.pages, book.readStatus)
     })
     
@@ -40,6 +43,13 @@ function addBookToLibrary() {
 }
 
 submitButton.addEventListener('click', function (e) {
-    addBookToLibrary()
     e.preventDefault();
+    addBookToLibrary()
+});
+
+document.querySelector('.book-list').addEventListener('click', (el) => {
+    console.log(el.target)
+    if(el.classList.contains('delete')) {
+        el.parentElement.parentElement.remove();
+    }
 })
