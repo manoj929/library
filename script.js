@@ -44,12 +44,12 @@ function addBookToLibrary() {
 
 submitButton.addEventListener('click', function (e) {
     e.preventDefault();
-    addBookToLibrary()
+    addBookToLibrary();
 });
 
-document.querySelector('.book-list').addEventListener('click', (el) => {
-    console.log(el.target)
-    if(el.classList.contains('delete')) {
-        el.parentElement.parentElement.remove();
-    }
-})
+// document.querySelector('.book-list').addEventListener('click', (element) => {
+//     console.log(element.target)
+//     if(element.classList.contains('delete')){
+//         element.parentElement.parentElement.remove()
+//     }
+// })
