@@ -29,7 +29,7 @@ function addBookToLibrary() {
         <td>${book.title}</td>
         <td>${book.author}</td>
         <td>${book.pages}</td>
-        <td>${book.readStatus}</td>
+        <td><button class="btn btn-danger btn-sm update">${book.readStatus}</button></td>
         <td><button class="btn btn-danger btn-sm delete">delete</button></td>
         `
         document.querySelector('.book-list').appendChild(tr)
@@ -53,7 +53,20 @@ function deleteBook(element){
     }
 }
 
+Book.prototype.updateStatus = function (element) {
+    if (element.classList.contains('update')) {
+        console.log('shaanged')
+        if (element.textContent == 'Not Read') {
+            this.readStatus = 'Read';
+            element.innerText = 'Read'
+        } else { this.readStatus = 'Not read'
+             element.innerText = 'Not Read' }
+
+    }
+}
+ 
 document.querySelector('.book-list').addEventListener('click', (e) => {
     console.log(e.target)
     deleteBook(e.target);
+    Book.prototype.updateStatus(e.target)
 })
