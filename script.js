@@ -15,7 +15,7 @@ function Book(title, author, pages, readStatus) {
 }
 
 function addBookToLibrary() {
-    if (title.value != '' && author.value != '' && pages.value != '', readStatus.value != '') {
+    if (title.value != '' && author.value != '' && pages.value != '') {
         const myBook = new Book(title.value, author.value, pages.value, readStatus.value)
         myLibrary.push(myBook)
     } else {
@@ -39,7 +39,7 @@ function addBookToLibrary() {
     title.value = '';
     author.value = '';
     pages.value = '';
-    readStatus.value = '';
+    // readStatus.value = '';
 }
 
 submitButton.addEventListener('click', function (e) {
